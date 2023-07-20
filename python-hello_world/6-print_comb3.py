@@ -1,3 +1,3 @@
-for first_digit in range(10):
+for first_digit in range(0, 9):
     for second_digit in range(first_digit + 1, 10):
-        print(f"{first_digit:02d}, {second_digit:02d}".format(), end=", " if second_digit < 9 else "\n")
+        print(f"{first_digit}{second_digit}", end=", ")
