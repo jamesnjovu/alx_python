@@ -3,7 +3,12 @@ import random
 number = random.randint(-10000, 10000)
 
 str_number = str(number)
-last_digit = int(str_number[-1])
+last_digit = 0
+
+if number > 0:
+    last_digit = int(str_number[-1])
+else:
+    last_digit = -int(str_number[-1])
 
 state = ''
 if last_digit > 5:
@@ -13,8 +18,4 @@ elif last_digit == 0:
 elif last_digit < 6 and last_digit != 0:
     state = "and is less than 6 and not 0"
 
-if number > 0:
-    print("Last digit of", number, "is", last_digit, state)
-else:
-    print("Last digit of", number, "is", -last_digit, state)
-
+print("Last digit of", number, "is", last_digit, state)
